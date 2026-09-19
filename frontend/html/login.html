@@ -58,108 +58,12 @@
         </label>
         <a href="#password"> Forget password?</a>
       </div>
-      <button id="btn" type="submit">Login</button>
+      <button id="btn" type="submit" >Login</button>
       <a href="register.html"> Don't have an Account ?</a>
     </form>
   </body>
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script>
-    let submit_btn = document.querySelector("#login_form");
-    let q = $("#username");
-    let w = document.querySelector("#password");
-    let z = document.querySelector("#become_back");
-    
-    submit_btn.addEventListener("submit", (event) => {
-      event.preventDefault();
-      let user = q.value;
-      let pass = w.value;
-      if (!user || !pass) {
-        console.log("Error: empty Input");
-        return;
-      }
-      if (user.length < 8 || pass.length < 8) {
-        console.log("Error: short Input");
-        return;
-      }
-      console.log("Valid input :)");
-    });
+  <script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+  <script src="../Js/login.js"> </script>
+  </html> 
 
-    // const cards = ["JavaSript", "c++", "DataBase"];
-    // cards.forEach((x,i) => {
-    //   const c = document.createElement("div");
-    //   c.classList.toggle("test");
-    //   c.id = i;
-    //   c.textContent = x;
-    //   document.body.append(c);
-    // });
-    const c = document.createElement("div");
-    c.classList.toggle("test");
-    c.textContent = cards[0];
-
-    let test_paresnt = document.querySelector("#remember_me");
-
-    // console.log(test_paresnt.parentElement);
-    // console.log(submit_btn.children);
-
-    z.addEventListener("click" , (event) => {
-        console.log(event.target);
-        console.log(event.currentTarget);
-        
-    });
-
-    let logo = document.querySelector("#logoLink");
-    console.log(logo.getAttribute("href"));
-    logo.setAttribute("href","../image/left.png");
-    // q.addEventListener("click", () => {
-    //   // this will apply the defualt of the form  ||  login.html?name=omar+88&password=jhj:90
-    //   q.classList.toggle("active");
-    //   console.log(q.value);
-    // });
-
-    // q.addEventListener("change" , () => { // when u clcik in anther things in the screen u will apply this
-    //     console.log("[");
-    //     console.log(q.value);
-    //     console.log("]");
-    // })
-    //    q.addEventListener("input" , () => { // every char u write it in the input will direct print in console
-    //     console.log("[");   // [ l
-    //     console.log(q.value);
-    //     console.log("]");
-    // })
-
-    // let btn = document.querySelector("#btn");
-    // btn.innerHTML = "<b>sign in ....</b>";
-    // btn,addEventListener("click", (event) => {
-    //     console.log(event.target);
-    // });
-    // btn.addEventListener("click", () => {
-    //     // console.log("Button clicked!");
-    // btn.classList.toggle("active");
-    // });
-
-    // btn.style.color = "white";
-    // btn.style.backgroundColor = "blue";
-
-    // btn.style.backgroundColor =  "rgb(98, 134, 107)";
-    // let card = document.querySelectorAll(".card");
-    // card.forEach((q) => {
-    // q.addEventListener("click" , (event) => {
-    //     event.target.classList.toggle("active");
-    // });
-    // });
-    // course.forEach((x,i )=> {
-    //     x.textContent = `Card ${i+1}`;
-    // });
-    // let test = $("#1");
-    // test.text("leen test!2!");
-    // console.log("val" , test.text());
-    // // test.addClass("active");
-  
-
-    // test.on("click" ,(event) => {
-    //     test.removeClass("test") // REMOVE
-    //      test.toggleClass("active");
-    // })
-
-  </script>
-</html>
+   

@@ -30,7 +30,7 @@
                 </div> 
                 <div class="profile_page">
                     <img class="profile_img" src="../image/profile.png"/>
-                    <h4> Admin </h4>
+                    <h4 id="username"> Admin </h4>
                 </div> 
             </div>    
         </div>
@@ -65,5 +65,16 @@
           <span> @ 2024 T2B  All rights reserved </span>
         </footer> 
     </body>
-  
+    <script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+    <script>
+        for (let i = 0; i < localStorage.length; i++) {
+        let key = localStorage.key(i);
+        let value = localStorage.getItem(key);
+
+        console.log(key + ":", value);
+}
+        const username = localStorage.getItem("UserName");
+        console.log(localStorage.length, "Name: ",username);
+        $("#username").text(username);
+        </script>
 </html>

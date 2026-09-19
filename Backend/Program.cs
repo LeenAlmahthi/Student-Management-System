@@ -147,7 +147,16 @@ builder.Services.AddCors(options =>
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowFrontend", policy =>
+    {
+        policy
+            .WithOrigins("http://localhost:5500")
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+    });
+});
 // ============================================================
 // Build application
 // ============================================================
@@ -166,7 +175,7 @@ using (var scope = app.Services.CreateScope())
 
     await SeedData.SeedRoles(roleManager);
 }
-
+    app.UseCors("AllowFrontend");
 
 // ============================================================
 // HTTP Request Pipeline

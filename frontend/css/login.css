@@ -72,7 +72,7 @@ input:not(#remember_me)  {
 .active {
     width: 250px;
     height: 30px;
-    background-color: #cc8117;
+    background-color: #449c6c;
     border : 3px rgb(12, 41, 19) solid;
     border-radius: 5px;
 }
