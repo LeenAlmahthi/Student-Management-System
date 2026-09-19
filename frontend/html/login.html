@@ -1,0 +1,165 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="Author" content="Leen Ghnaim" />
+    <meta name="description" content="Login page to T2B website" />
+    <link  id="logoLink" rel="icon" href="website_logo.png" />
+    <link rel="stylesheet" href="../css/login.css" />
+    <title>Login</title>
+  </head>
+  <body>
+    <form id="login_form">
+      <button type="button" id="become_back">
+        <a href="register.html">
+          <svg
+            xmlns="http://w3.org"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+            <polyline points="10 17 15 12 10 7" />
+            <line x1="15" y1="12" x2="3" y2="12" />
+          </svg>
+        </a>
+      </button>
+      <h3>Sign in with email</h3>
+      <p id="description_login">
+        Make a new doc to bring your words,<br />data and teams together. For
+        free
+      </p>
+      <div>
+        <input
+          type="text"
+          id="username"
+          placeholder=" ✉ Email"
+          name="name"
+          required
+        />
+      </div>
+      <div>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder=" ♙  Password"
+          required
+        />
+      </div>
+      <div id="rem">
+        <label id="remember_me">
+          <input type="checkbox" id="remember_me" name="remember_me" />
+          Remmber Me
+        </label>
+        <a href="#password"> Forget password?</a>
+      </div>
+      <button id="btn" type="submit">Login</button>
+      <a href="register.html"> Don't have an Account ?</a>
+    </form>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script>
+    let submit_btn = document.querySelector("#login_form");
+    let q = $("#username");
+    let w = document.querySelector("#password");
+    let z = document.querySelector("#become_back");
+    
+    submit_btn.addEventListener("submit", (event) => {
+      event.preventDefault();
+      let user = q.value;
+      let pass = w.value;
+      if (!user || !pass) {
+        console.log("Error: empty Input");
+        return;
+      }
+      if (user.length < 8 || pass.length < 8) {
+        console.log("Error: short Input");
+        return;
+      }
+      console.log("Valid input :)");
+    });
+
+    // const cards = ["JavaSript", "c++", "DataBase"];
+    // cards.forEach((x,i) => {
+    //   const c = document.createElement("div");
+    //   c.classList.toggle("test");
+    //   c.id = i;
+    //   c.textContent = x;
+    //   document.body.append(c);
+    // });
+    const c = document.createElement("div");
+    c.classList.toggle("test");
+    c.textContent = cards[0];
+
+    let test_paresnt = document.querySelector("#remember_me");
+
+    // console.log(test_paresnt.parentElement);
+    // console.log(submit_btn.children);
+
+    z.addEventListener("click" , (event) => {
+        console.log(event.target);
+        console.log(event.currentTarget);
+        
+    });
+
+    let logo = document.querySelector("#logoLink");
+    console.log(logo.getAttribute("href"));
+    logo.setAttribute("href","../image/left.png");
+    // q.addEventListener("click", () => {
+    //   // this will apply the defualt of the form  ||  login.html?name=omar+88&password=jhj:90
+    //   q.classList.toggle("active");
+    //   console.log(q.value);
+    // });
+
+    // q.addEventListener("change" , () => { // when u clcik in anther things in the screen u will apply this
+    //     console.log("[");
+    //     console.log(q.value);
+    //     console.log("]");
+    // })
+    //    q.addEventListener("input" , () => { // every char u write it in the input will direct print in console
+    //     console.log("[");   // [ l
+    //     console.log(q.value);
+    //     console.log("]");
+    // })
+
+    // let btn = document.querySelector("#btn");
+    // btn.innerHTML = "<b>sign in ....</b>";
+    // btn,addEventListener("click", (event) => {
+    //     console.log(event.target);
+    // });
+    // btn.addEventListener("click", () => {
+    //     // console.log("Button clicked!");
+    // btn.classList.toggle("active");
+    // });
+
+    // btn.style.color = "white";
+    // btn.style.backgroundColor = "blue";
+
+    // btn.style.backgroundColor =  "rgb(98, 134, 107)";
+    // let card = document.querySelectorAll(".card");
+    // card.forEach((q) => {
+    // q.addEventListener("click" , (event) => {
+    //     event.target.classList.toggle("active");
+    // });
+    // });
+    // course.forEach((x,i )=> {
+    //     x.textContent = `Card ${i+1}`;
+    // });
+    // let test = $("#1");
+    // test.text("leen test!2!");
+    // console.log("val" , test.text());
+    // // test.addClass("active");
+  
+
+    // test.on("click" ,(event) => {
+    //     test.removeClass("test") // REMOVE
+    //      test.toggleClass("active");
+    // })
+
+  </script>
+</html>
