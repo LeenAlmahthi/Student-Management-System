@@ -15,7 +15,11 @@ var builder = WebApplication.CreateBuilder(args);
 // Database
 // ============================================================
 
-builder.Services.AddDbContext<DataContext>();
+// builder.Services.AddDbContext<DataContext>();
+builder.Services.AddDbContext<DataContext>(options =>
+    options.UseSqlServer(
+        builder.Configuration.GetConnectionString("DefaultConnection")
+    ));
 
 
 // ============================================================
