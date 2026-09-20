@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta chatset="UTF-8" > 
+        <meta name="Author" content="Leen ghnaim" > 
+        <meta name="description" content="home [page]" >
+        <link rel="icon" href="../image/website_logo.png">
+        <link rel="stylesheet" href="../css/home_page.css">
+        <title> home page </title> 
+    </head>
+    <body>
+        <div class="nev_bar">
+        <div class="logo_nav">
+            <div class="img_border_nav">
+                <img id="logo-img" src="../image/T2B.png"/>
+            </div>
+            <h2> T2B Academy </h2>
+            </div>
+                <div class="item_meddle">
+                    <img src="../image/home.png">
+                    <h4> Home </h4>
+                </div>
+                <div class="item_meddle">
+                    <img src="../image/course.png" >
+                    <h4> Courses </h4>
+                </div>
+                <div class="item_meddle">
+                    <img src="../image/students.png">
+                    <h4> students </h4>
+                </div> 
+                <div class="profile_page">
+                    <img class="profile_img" src="../image/profile.png"/>
+                    <h4 id="username"> Admin </h4>
+                </div> 
+            </div>    
+        </div>
+        <div class="content">
+            <h1><bold> Welcome to T2B </bold></h1>
+            <lable id="text_dd"> Manage your courses and students </lable>
+            <div class="divider">
+              <span class="line"></span>
+              <span class="dot"></span>
+              <span class="line2"></span>
+            </div>
+            <div  class="cards" >
+                <div class="course">
+                    <div class="border_img_course">
+                        <img  style="width: 120px; height: 100px;  margin-top: 15px; margin-right: 30px;"  src="../image/course.png">
+                    </div>
+                    <h2>Course</h2>
+                    <lable id="text_dd"> Chatte, upidate and manage your courses </lable>  
+                    <button  style="background-color: rgba(43, 84, 200,3);"> <a href= "Course.html"> Course </a> </button>
+                </div>
+                <div class="students" >
+                    <div class="border_img_std">
+                    <img  style="width: 100%; height: 100px;  margin-top: 15px" src="../image/students.png">
+                    </div>
+                    <h2>students</h2>
+                    <lable id="text_dd">Adit te and mutage your students </lable>      
+                    <button  style="background-color: green;"> <a href="students.html"> Students </a> </button>
+                </div>
+            </div> 
+        </div>
+        <footer>
+          <span> @ 2024 T2B  All rights reserved </span>
+        </footer> 
+    </body>
+    <script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+    <script>
+        for (let i = 0; i < localStorage.length; i++) {
+        let key = localStorage.key(i);
+        let value = localStorage.getItem(key);
+
+        console.log(key + ":", value);
+}
+        const username = localStorage.getItem("UserName");
+        console.log(localStorage.length, "Name: ",username);
+        $("#username").text(username);
+        </script>
+</html>

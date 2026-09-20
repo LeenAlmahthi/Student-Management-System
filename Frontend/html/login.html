@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="Author" content="Leen Ghnaim" />
+    <meta name="description" content="Login page to T2B website" />
+    <link id="logoLink" rel="icon" href="website_logo.png" />
+    <link rel="stylesheet" href="../css/login.css" />
+    <title>Login</title>
+  </head>
+  <body>
+    <form id="login_form">
+      <button type="button" id="become_back">
+        <a href="register.html">
+          <svg
+            xmlns="http://w3.org"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+            <polyline points="10 17 15 12 10 7" />
+            <line x1="15" y1="12" x2="3" y2="12" />
+          </svg>
+        </a>
+      </button>
+      <h3>Sign in with email</h3>
+      <p id="description_login">
+        Make a new doc to bring your words,<br />data and teams together. For
+        free
+      </p>
+      <div>
+        <input
+          type="text"
+          id="username"
+          placeholder=" ✉ Email"
+          name="name"
+          required
+        />
+      </div>
+      <div>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder=" ♙  Password"
+          required
+        />
+      </div>
+      <div id="rem">
+        <label id="remember_me">
+          <input type="checkbox" id="remember_me" name="remember_me" />
+          Remmber Me
+        </label>
+        <a href="#password"> Forget password?</a>
+      </div>
+      <button id="btn" type="submit">Login</button>
+      <a href="register.html"> Don't have an Account ?</a>
+    </form>
+  </body>
+  <script
+    src="https://code.jquery.com/jquery-4.0.0.js"
+    integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U="
+    crossorigin="anonymous"
+  ></script>
+  <script src="../Js/api-config.js"></script>
+  <script src="../Js/login.js"></script>
+</html>
