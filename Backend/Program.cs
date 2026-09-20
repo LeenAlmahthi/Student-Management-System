@@ -16,12 +16,11 @@ var builder = WebApplication.CreateBuilder(args);
 // ============================================================
 
 // builder.Services.AddDbContext<DataContext>();
+
 builder.Services.AddDbContext<DataContext>(options =>
     options.UseSqlServer(
         builder.Configuration.GetConnectionString("DefaultConnection")
     ));
-
-
 // ============================================================
 // Identity
 // ============================================================
@@ -129,12 +128,13 @@ builder.Services.AddAuthorization();
 // ============================================================
 
 builder.Services.AddControllers();
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend", policy =>
     {
         policy
-            .WithOrigins("http://127.0.0.1:5501")
+            .AllowAnyOrigin()
             .AllowAnyHeader()
             .AllowAnyMethod();
     });
@@ -177,7 +177,6 @@ using (var scope = app.Services.CreateScope())
     app.UseSwagger();
     app.UseSwaggerUI();
 //}
-
 //app.UseHttpsRedirection();
 
 app.UseCors("AllowFrontend");

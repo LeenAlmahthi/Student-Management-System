@@ -15,10 +15,9 @@ namespace School_api.Data
          AspNetUserLogins
          AspNetUserTokens
          */
-          public DataContext(DbContextOptions<DataContext> options)
+        public DataContext(DbContextOptions<DataContext> options)
             : base(options)
-        {
-        }
+        {}
         public DbSet<Students> Students { get; set;}
         public DbSet<Course> Courses { get; set; }
         public DbSet<AvailableCourse> Avaliblecourses { get; set; }
@@ -27,10 +26,10 @@ namespace School_api.Data
 
         // protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         // {
-        //      optionsBuilder.UseSqlServer(@"Server=.\SQLEXPRESS;
-        //         DataBase=uni_db;
-        //         Trusted_Connection=True;
-        // TrustServerCertificate=True;");
+        //     optionsBuilder.UseSqlServer(@"Server=.\SQLEXPRESS;
+        //                                      DataBase=uni_db;
+        //                                       Trusted_Connection=True;
+        //                                         TrustServerCertificate=True;");
 
         // }
     }
